@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Семантичний пошук</title>
+</head>
+<body>
+    <h1>Семантична пошукова система</h1>
+
+    <!-- Пошук -->
+    <h2>Пошук</h2>
+    <form action="/search" method="get">
+        <input type="text" name="query" placeholder="Введіть пошуковий запит" required>
+        <button type="submit">Шукати</button>
+    </form>
+    {% if results %}
+    <h3>Результат:</h3>
+    <ul>
+        {% for result in results %}
+        <li>{{ result[0] }} - {{ result[1] }} - {{ result[2] }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    <!-- Оновлення онтології -->
+    <h2>Оновити(додати) дані в онтологію</h2>
+    <form action="/update" method="post">
+        <input type="text" name="subject" placeholder="Суб'єкт" required>
+        <input type="text" name="predicate" placeholder="Предикат" required>
+        <input type="text" name="object" placeholder="Об'єкт" required>
+        <button type="submit">Оновити</button>
+    </form>
+
+    <!-- Граф -->
+    {% if graph %}
+    <h2>Візуалізація графа</h2>
+    <div>
+        {{ graph|safe }}
+    </div>
+    {% endif %}
+</body>
+</html>

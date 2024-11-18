@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:ex="http://example.com/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://example.com/ElectronicComponent">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Resistor1">
+    <rdf:type rdf:resource="http://example.com/Resistor"/>
+    <ex:hasResistance>1kΩ</ex:hasResistance>
+    <ex:hasPowerRating>0.25W</ex:hasPowerRating>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Diode2">
+    <rdf:type rdf:resource="http://example.com/Diode"/>
+    <ex:hasVoltage>0.3V</ex:hasVoltage>
+    <ex:hasType>Germanium</ex:hasType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Capacitor5">
+    <ex:type>Capacitor</ex:type>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Transistor2">
+    <rdf:type rdf:resource="http://example.com/Transistor"/>
+    <ex:hasVoltage>3.3V</ex:hasVoltage>
+    <ex:hasType>PNP</ex:hasType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Diode">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.com/ElectronicComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Capacitor">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.com/ElectronicComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Resistor">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.com/ElectronicComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Diode1">
+    <rdf:type rdf:resource="http://example.com/Diode"/>
+    <ex:hasVoltage>0.7V</ex:hasVoltage>
+    <ex:hasType>Silicon</ex:hasType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Capacitor2">
+    <rdf:type rdf:resource="http://example.com/Capacitor"/>
+    <ex:hasCapacity>220uF</ex:hasCapacity>
+    <ex:hasVoltage>25V</ex:hasVoltage>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Capacitor42">
+    <ex:type>Capacitor</ex:type>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Capacitor1">
+    <rdf:type rdf:resource="http://example.com/Capacitor"/>
+    <ex:hasCapacity>100uF</ex:hasCapacity>
+    <ex:hasVoltage>16V</ex:hasVoltage>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Transistor1">
+    <rdf:type rdf:resource="http://example.com/Transistor"/>
+    <ex:hasVoltage>5V</ex:hasVoltage>
+    <ex:hasType>NPN</ex:hasType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Resistor2">
+    <rdf:type rdf:resource="http://example.com/Resistor"/>
+    <ex:hasResistance>10kΩ</ex:hasResistance>
+    <ex:hasPowerRating>0.5W</ex:hasPowerRating>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Transistor">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.com/ElectronicComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Capacitor3">
+    <ex:type>Capacitor</ex:type>
+  </rdf:Description>
+</rdf:RDF>
